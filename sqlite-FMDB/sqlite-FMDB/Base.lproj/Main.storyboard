@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SoJ-ua-pzr">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="BFG-vC-gk2">
+            <objects>
+                <viewController id="SoJ-ua-pzr" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G4I-7b-8qG"/>
+                        <viewControllerLayoutGuide type="bottom" id="uEh-yg-n9C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Nx-cy-Twi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a test of CRUD for sqlite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IfT-bq-fKb">
+                                <rect key="frame" x="181" y="50" width="239" height="30"/>
+                                <color key="backgroundColor" red="0.79536158379999999" green="0.54277958579999996" blue="0.59004064810000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4EE-9A-AkX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Zv-bp-C7y" userLabel="create">
+                                <rect key="frame" x="141" y="130" width="318" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Swo-DL-Cat"/>
+                                </constraints>
+                                <state key="normal" title="create 100 students scores between 20 to 100"/>
+                                <connections>
+                                    <action selector="createData:" destination="SoJ-ua-pzr" eventType="touchUpInside" id="lim-zy-FCl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zd-kC-OKe" userLabel="delete">
+                                <rect key="frame" x="141" y="230" width="318" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="pX9-y0-gEr"/>
+                                </constraints>
+                                <state key="normal" title="delete score from 90 to 100"/>
+                                <connections>
+                                    <action selector="deleteData:" destination="SoJ-ua-pzr" eventType="touchUpInside" id="cEs-Hu-jYZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2U-mO-GOC" userLabel="search">
+                                <rect key="frame" x="141" y="430" width="318" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="seach scores from 60--75"/>
+                                <connections>
+                                    <action selector="searchData:" destination="SoJ-ua-pzr" eventType="touchUpInside" id="OZC-gJ-Dle"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ic3-p2-ede" userLabel="update">
+                                <rect key="frame" x="141" y="330" width="318" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="update less than 60 to 59.99"/>
+                                <connections>
+                                    <action selector="updateData:" destination="SoJ-ua-pzr" eventType="touchUpInside" id="9QB-GN-gSh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IfT-bq-fKb" firstAttribute="centerX" secondItem="9Nx-cy-Twi" secondAttribute="centerX" id="2HW-NS-ebL"/>
+                            <constraint firstItem="Ic3-p2-ede" firstAttribute="top" secondItem="7zd-kC-OKe" secondAttribute="bottom" constant="50" id="54W-26-g1X"/>
+                            <constraint firstItem="1Zv-bp-C7y" firstAttribute="centerX" secondItem="9Nx-cy-Twi" secondAttribute="centerX" id="7S1-yM-60o"/>
+                            <constraint firstItem="7zd-kC-OKe" firstAttribute="centerX" secondItem="9Nx-cy-Twi" secondAttribute="centerX" id="8KQ-DV-Ol0"/>
+                            <constraint firstItem="7zd-kC-OKe" firstAttribute="width" secondItem="1Zv-bp-C7y" secondAttribute="width" id="8W7-Z2-4nD"/>
+                            <constraint firstItem="7zd-kC-OKe" firstAttribute="top" secondItem="1Zv-bp-C7y" secondAttribute="bottom" constant="50" id="Hom-7m-Rqp"/>
+                            <constraint firstItem="1Zv-bp-C7y" firstAttribute="top" secondItem="IfT-bq-fKb" secondAttribute="bottom" constant="50" id="JOl-T1-XDz"/>
+                            <constraint firstItem="L2U-mO-GOC" firstAttribute="width" secondItem="Ic3-p2-ede" secondAttribute="width" id="KtW-RM-7DC"/>
+                            <constraint firstItem="Ic3-p2-ede" firstAttribute="height" secondItem="7zd-kC-OKe" secondAttribute="height" id="Njo-2i-nOS"/>
+                            <constraint firstItem="Ic3-p2-ede" firstAttribute="centerX" secondItem="9Nx-cy-Twi" secondAttribute="centerX" id="TPJ-Wo-jVF"/>
+                            <constraint firstItem="IfT-bq-fKb" firstAttribute="top" secondItem="G4I-7b-8qG" secondAttribute="bottom" constant="30" id="XJ7-58-aF8"/>
+                            <constraint firstItem="L2U-mO-GOC" firstAttribute="top" secondItem="Ic3-p2-ede" secondAttribute="bottom" constant="50" id="dkS-MC-GXb"/>
+                            <constraint firstItem="Ic3-p2-ede" firstAttribute="width" secondItem="7zd-kC-OKe" secondAttribute="width" id="gSR-0N-e4w"/>
+                            <constraint firstItem="L2U-mO-GOC" firstAttribute="height" secondItem="Ic3-p2-ede" secondAttribute="height" id="oBs-NH-8S7"/>
+                            <constraint firstItem="L2U-mO-GOC" firstAttribute="centerX" secondItem="9Nx-cy-Twi" secondAttribute="centerX" id="qrq-pK-mJh"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LYw-Dv-X7V" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="387"/>
+        </scene>
+    </scenes>
+</document>
